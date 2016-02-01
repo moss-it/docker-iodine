@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update 
 RUN apt-get install -y \
-        net-tools bridge-utils iodine iptables openssh-server && \
+        net-tools bridge-utils iodine iptables openssh-server python && \
 
 # Clean up
         rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
