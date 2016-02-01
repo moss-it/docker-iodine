@@ -1,0 +1,13 @@
+iodine:
+    image: moss/iodine:0.1
+    restart: always:3
+    ports:
+        - "53:53/udp"
+    environment:
+        IODINE_HOST: vpn.mossteam.com.br
+        IODINE_PASSWORD: vpn-its-a-safe-way-to-do-this
+        EXTERNAL_IP: 200.239.65.50
+    cap_add:
+        - NET_ADMIN
+    devices: 
+        - /dev/net/tun
